@@ -5,6 +5,7 @@ class HelpProcessor(ProcessorBase):
     def process(self, **kwargs):
         calculators = kwargs['calculators']
         processors = kwargs['processors']
+        exit_commands = kwargs['exit_commands']
 
         print('--------------------')
         print('Calculation commands')
@@ -18,6 +19,12 @@ class HelpProcessor(ProcessorBase):
         for cmd, processor in processors.items():
             print(cmd, end=': ')
             print(processor.description())
+
+        print()
+
+        print('Exit commands')
+        print(', '.join(exit_commands), end=': ')
+        print('Exits this application')
 
         print('--------------------')
 

@@ -1,11 +1,9 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
+
+from descriptable import Descriptable
 
 
-class ProcessorBase(ABC):
+class ProcessorBase(Descriptable):
     @abstractmethod
     def process(self, **kwargs):
-        pass
-
-    @abstractmethod
-    def description(self):
         pass

@@ -1,11 +1,9 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
+
+from descriptable import Descriptable
 
 
-class CalculatorBase(ABC):
+class CalculatorBase(Descriptable):
     @abstractmethod
     def calculate(self, digits: list):
-        pass
-
-    @abstractmethod
-    def description(self):
         pass

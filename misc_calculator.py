@@ -37,13 +37,6 @@ class History(NamedTuple):
         return History(operation, digits, result)
 
 
-EXIT_COMMANDS = {
-    'exit',
-    'bye',
-    'stop',
-    'end',
-}
-
 CALCULATORS = {
     Command.of('sum', 'total'): SumCalculator(),
     Command.of('mean', 'average', 'avg'): MeanCalculator(),
@@ -58,6 +51,13 @@ PROCESSORS = {
     Command.of('clear', 'clr', 'reset', 'rst'): ClearProcessor(),
     Command.of('help', 'h'): HelpProcessor(),
     Command.of('history', 'hist'): HistoryProcessor(),
+}
+
+EXIT_COMMANDS = {
+    'exit',
+    'bye',
+    'stop',
+    'end',
 }
 
 
@@ -99,7 +99,7 @@ def process(cmd: str, digits: list, history: list):
 
     elif is_process_command(cmd):
         get_processor(cmd).process(cmd=cmd, digits=digits, history=history, calculators=CALCULATORS,
-                                   processors=PROCESSORS)
+                                   processors=PROCESSORS, exit_commands=EXIT_COMMANDS)
         history.append(History.of(cmd))
 
     else:
