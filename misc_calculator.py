@@ -135,4 +135,4 @@ if __name__ == '__main__':
             process(data, digits, history)
         else:
             if not try_append_as_digit(digits, data):
-                print('The inputted data is ignored because it cannot be interpreted as a digit or command')
+                print('The inputted data cannot be interpreted as a digit or command')
