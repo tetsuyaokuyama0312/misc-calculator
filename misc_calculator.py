@@ -37,6 +37,7 @@ class History(NamedTuple):
         return History(operation, digits, result)
 
 
+# Dictionary that associates commands with calculators
 CALCULATORS = {
     Command.of('sum', 'total'): SumCalculator(),
     Command.of('mean', 'average', 'avg'): MeanCalculator(),
@@ -46,6 +47,7 @@ CALCULATORS = {
     Command.of('count', 'cnt', 'length', 'len'): CountCalculator(),
 }
 
+# Dictionary that associates commands with processors
 PROCESSORS = {
     Command.of('check', 'check-digits', 'digits'): CheckProcessor(),
     Command.of('clear', 'clr', 'reset', 'rst'): ClearProcessor(),
