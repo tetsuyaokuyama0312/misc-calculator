@@ -45,6 +45,7 @@ CALCULATORS = {
     Command.of('max'): MaxCalculator(),
     Command.of('min'): MinCalculator(),
     Command.of('count', 'cnt', 'length', 'len'): CountCalculator(),
+    Command.of('random', 'rand'): RandomCalculator(),
 }
 
 # Dictionary that associates commands with processors
