@@ -19,6 +19,7 @@ This application does miscellaneous calculations.
       |max|Calculates max of digits|
       |min|Calculates min of digits|
       |count, cnt, length, len|Calculates count of digits|
+      |random, rand|Selects one of the digits randomly|
 
   - Other commands
       |command|description|
@@ -31,7 +32,7 @@ This application does miscellaneous calculations.
   - Exit commands
       |command|description|
       | ---- | ---- |
-      |end, stop, exit, bye|Exits this application|
+      |exit, bye, stop, end|Exits this application|
 
 ### Usage image
   ![usage](usage.png)
