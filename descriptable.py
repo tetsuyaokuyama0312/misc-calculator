@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class Descriptable(ABC):
     """
-    Interface indicating that it is an descriptable object
+    Interface indicating that it is a descriptable object
     """
 
     @abstractmethod
