@@ -39,13 +39,17 @@ class History(NamedTuple):
 
 # Dictionary that associates commands with calculators
 CALCULATORS = {
-    Command.of('sum', 'total'): SumCalculator(),
+    Command.of('count', 'cnt', 'length', 'len'): CountCalculator(),
+    Command.of('max'): MaxCalculator(),
     Command.of('mean', 'average', 'avg'): MeanCalculator(),
     Command.of('median', 'med'): MedianCalculator(),
-    Command.of('max'): MaxCalculator(),
     Command.of('min'): MinCalculator(),
-    Command.of('count', 'cnt', 'length', 'len'): CountCalculator(),
+    Command.of('pstd', 'parentstd'): ParentStdCalculator(),
+    Command.of('pvar', 'pvariance', 'parentvariance'): ParentVarianceCalculator(),
     Command.of('random', 'rand'): RandomCalculator(),
+    Command.of('std', 'stdev', 'standarddeviation'): StdCalculator(),
+    Command.of('sum', 'total'): SumCalculator(),
+    Command.of('var', 'variance'): VarianceCalculator(),
 }
 
 # Dictionary that associates commands with processors

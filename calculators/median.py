@@ -5,7 +5,9 @@ from .base import CalculatorBase
 
 class MedianCalculator(CalculatorBase):
     def calculate(self, digits: list):
-        return median(digits) if digits else 0
+        if not digits:
+            return 0
+        return median(digits)
 
     def description(self):
         return 'Calculates median of digits'

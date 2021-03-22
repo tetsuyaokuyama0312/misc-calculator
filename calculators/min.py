@@ -3,7 +3,9 @@ from .base import CalculatorBase
 
 class MinCalculator(CalculatorBase):
     def calculate(self, digits: list):
-        return min(digits) if digits else 0
+        if not digits:
+            return 0
+        return min(digits)
 
     def description(self):
         return 'Calculates min of digits'

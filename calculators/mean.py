@@ -5,7 +5,9 @@ from .base import CalculatorBase
 
 class MeanCalculator(CalculatorBase):
     def calculate(self, digits: list):
-        return mean(digits) if digits else 0
+        if not digits:
+            return 0
+        return mean(digits)
 
     def description(self):
         return 'Calculates mean of digits'

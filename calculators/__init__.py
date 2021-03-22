@@ -4,5 +4,9 @@ from .max import MaxCalculator
 from .mean import MeanCalculator
 from .median import MedianCalculator
 from .min import MinCalculator
+from .pstd import ParentStdCalculator
+from .pvariance import ParentVarianceCalculator
 from .random import RandomCalculator
+from .std import StdCalculator
 from .sum import SumCalculator
+from .variance import VarianceCalculator
